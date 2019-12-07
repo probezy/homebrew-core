@@ -17,6 +17,7 @@ class Cpolar < Formula
     #                      "--disable-silent-rules",
     #                      "--prefix=#{prefix}"
     # system "cmake", ".", *std_cmake_args
+    bin.install cpolar
   end
 
   test do
