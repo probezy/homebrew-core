@@ -1,9 +1,9 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
-class CpolarStableDarwinAmd < Formula
-  desc ""
-  homepage ""
+class Cpolar < Formula
+  desc "cpolar client"
+  homepage "www.cpolar.com"
   url "https://www.cpolar.com/static/downloads/cpolar-stable-darwin-amd64.tar.gz"
   sha256 "baec7f205b6810d44616bf3b54416291505e9d3c66ba9b80c5524417d25517c4"
 
