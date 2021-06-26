@@ -5,7 +5,7 @@ class Cpolar < Formula
   desc "cpolar client"
   homepage "www.cpolar.com"
   url "https://www.cpolar.com/static/downloads/releases/3.2.82/cpolar-stable-darwin-amd64.zip"
-  sha256 "d002670786a7d4e2539fc7f7e6123177f30bd5a8ef6851d271467568c08262d9"
+  sha256 "7613871894f91286935adfb1dffff9d3ae382b506cce6b7be1c66fc78fe20e3b"
 
   # depends_on "cmake" => :build
 
