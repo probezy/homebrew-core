@@ -2,22 +2,39 @@
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 class Cpolar < Formula
-  desc "cpolar client"
-  homepage "www.cpolar.com"
-  url "https://www.cpolar.com/static/downloads/releases/3.2.85/cpolar-stable-darwin-amd64.tar.gz"
-  sha256 "xxxsumxxx"
+  desc "Cpolar Client"
+  homepage "https://www.cpolar.com"
+  license ""
+  version "xxx_version_xxx"
+
+  arch = "arm64"
+  sha256 "xxx_mac_arm64_sum_xxx"
+  platform = "darwin"
+
+  on_intel do
+    arch = "amd64"
+    sha256 "xxx_mac_amd64_sum_xxx"
+  end
+
+  on_linux do
+    platform = "linux"
+    sha256 "xxx_linux_amd64_sum_xxx"
+  end
+
+  url "https://static.cpolar.com/downloads/releases/#{version}/cpolar-stable-#{platform}-#{arch}.zip"
+
 
   # depends_on "cmake" => :build
+  # Don't update this unless this version cannot bootstrap the new version.
+
 
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
     # Remove unrecognized options if warned by configure
-    #system "./configure", "--disable-debug",
-    #                        "--disable-dependency-tracking",
-    #                      "--disable-silent-rules",
-    #                      "--prefix=#{prefix}"
-    # system "cmake", ".", *std_cmake_args
+    # https://rubydoc.brew.sh/Formula.html#std_configure_args-instance_method
+
     bin.install "cpolar"
+    # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
   end
 
   test do
@@ -25,11 +42,11 @@ class Cpolar < Formula
     #
     # This test will fail and we won't accept that! For Homebrew/homebrew-core
     # this will need to be a test that verifies the functionality of the
-    # software. Run the test with `brew test cpolar-stable-darwin-amd`. Options passed
+    # software. Run the test with `brew test cpolar-foo`. Options passed
     # to `brew install` such as `--HEAD` also need to be provided to `brew test`.
     #
     # The installed folder is not in the path, so use the entire path to any
     # executables being tested: `system "#{bin}/program", "do", "something"`.
-    system "false"
+    system "#{bin}/cpolar", "version"
   end
 end
