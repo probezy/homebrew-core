@@ -8,17 +8,17 @@ class Cpolar < Formula
   version "3.3.18"
 
   arch = "arm64"
-  sha256 "08a5f5e708b01576efa453419d0844cbe7fd8ffd4cd9d515edc654defffd19b9"
+  sha256 "f733f2bfa09e3428254d2239121bdd4dd7fe301b4b1c901cb0a89ddbe71bf01f"
   platform = "darwin"
 
   on_intel do
     arch = "amd64"
-    sha256 "66b4f20558de0de6fe9c2c9c0495aecb71dcbbf73ed830021a3adc0a89120b0c"
+    sha256 "524aea23e8f59e0f1acb1c71bf2ec56e571193d7b470a336934857a58f3f015e"
   end
 
   on_linux do
     platform = "linux"
-    sha256 "5cd3320c4369928ccb509c4f5fa2ec3b86151ead77e1b77c1694aa64c43e32e7"
+    sha256 "c4513b2f6fc669ae42139197056edad66ade06dc805376ea95d9f6d4edb209b7"
   end
 
   url "https://static.cpolar.com/downloads/releases/#{version}/cpolar-stable-#{platform}-#{arch}.zip"
