@@ -21,7 +21,7 @@ class Cpolar < Formula
     sha256 "c4513b2f6fc669ae42139197056edad66ade06dc805376ea95d9f6d4edb209b7"
   end
 
-  url "https://static.cpolar.com/downloads/releases/#{version}/cpolar-stable-#{platform}-#{arch}.zip"
+  url "https://www.cpolar.com/static/downloads/releases/#{version}/cpolar-stable-#{platform}-#{arch}.zip"
 
 
   # depends_on "cmake" => :build
